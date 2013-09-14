@@ -13,7 +13,7 @@ window.onload = function() {
   scene.add(camera)
 
   camera.position.x = 0
-  camera.position.y = 30
+  camera.position.y = 45
   camera.position.z = 100
 
   renderer.setSize(WIDTH, HEIGHT)
@@ -57,7 +57,7 @@ window.onload = function() {
     var delta = time-sample
     frame++
     if (delta > 1000) {
-      fpsElement.textContent = 'FPSr: ' + (frame/(delta/1000)).toFixed(2)
+      fpsElement.textContent = 'FPS: ' + (frame/(delta/1000)).toFixed(2)
       sample = time
       frame = 0
     }

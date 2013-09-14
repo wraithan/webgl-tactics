@@ -1,19 +1,14 @@
 var THREE = require('three')
 
 window.onload = function() {
-  // set the scene size
   var WIDTH = 400
     , HEIGHT = 300
-
-  // get the DOM element to attach to
-  var container = document.getElementById('container')
-
-  // create a WebGL renderer, camera and a scene
-  var renderer = new THREE.WebGLRenderer()
-  var camera = new THREE.OrthographicCamera(WIDTH/-2, WIDTH/2,
+    , container = document.getElementById('container')
+    , fpsElement = document.getElementById('fps')
+    , renderer = new THREE.WebGLRenderer()
+    , camera = new THREE.OrthographicCamera(WIDTH/-2, WIDTH/2,
                                             HEIGHT/2, HEIGHT/-2)
-
-  var scene = new THREE.Scene()
+    , scene = new THREE.Scene()
 
   scene.add(camera)
 
@@ -62,7 +57,7 @@ window.onload = function() {
     var delta = time-sample
     frame++
     if (delta > 1000) {
-      console.log('fps: %s', (frame/(delta/1000)).toFixed(2))
+      fpsElement.textContent = 'FPSr: ' + (frame/(delta/1000)).toFixed(2)
       sample = time
       frame = 0
     }

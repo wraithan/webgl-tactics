@@ -1,0 +1,29 @@
+{
+  "name": "webgl-tactics",
+  "version": "0.0.1",
+  "description": "Eventually a clone of Final Fantasy Tactics's engine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wraithan/webgl-tactics.git"
+  },
+  "keywords": [
+    "webgl",
+    "final fantasy tactics"
+  ],
+  "author": "Wraithan (http://wraithan.net/)",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/wraithan/webgl-tactics/issues"
+  },
+  "dependencies": {
+    "three": "~0.58.9",
+    "browserify": "~2.29.1"
+  },
+  "devDependencies": {
+    "beefy": "~0.4.2"
+  }
+}

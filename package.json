@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "three": "~0.58.9",
-    "browserify": "~2.29.1"
+    "browserify": "~2.29.1",
+    "raf": "0.0.3"
   },
   "devDependencies": {
     "beefy": "~0.4.2"

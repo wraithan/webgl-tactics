@@ -3,10 +3,11 @@ var THREE = require('three')
   , fps = require('./lib/fps')
   , generator = require('./lib/map-generator')
   , loader = require('./lib/map-loader')
+  , raf = require('raf')
 
 window.onload = function() {
-  var WIDTH = 400
-    , HEIGHT = 300
+  var WIDTH = 600
+    , HEIGHT = 500
     , container = document.getElementById('container')
     , renderer = new THREE.WebGLRenderer()
     , camera = new THREE.OrthographicCamera(WIDTH/-2, WIDTH/2,
@@ -52,9 +53,8 @@ window.onload = function() {
     camera.lookAt({x: 0, y: 0, z: 0})
   }, 1000/60)
 
-  ;(function animloop(time) {
-    window.requestAnimationFrame(animloop)
+  raf().on('data', function(time) {
     renderer.render(scene, camera)
-    trackFps(time)
-  })()
+    trackFps()
+  })
 }
